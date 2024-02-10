@@ -1,11 +1,11 @@
 
-import collections.Lists;
-import collections.Maps;
-import collections.Queues;
-import collections.Sets;
+import collections.*;
 
 public class Main {
     public static void main(String[] args) {
+
+//**************Collections**************//
+
         Sets sets = new Sets();
         // sets.addFruits();
 
@@ -16,6 +16,12 @@ public class Main {
         // Queues.niceFruits();
 
         Maps maps = new Maps();
-        maps.addFruits();
+        // maps.addFruits();
+
+        EnhancedForLoop enhancedForLoop = new EnhancedForLoop();
+        // enhancedForLoop.loopTest();
+
+        ForEachLambda forEachLambda = new ForEachLambda();
+        // forEachLambda.testForeachLambda();
     }
 }
