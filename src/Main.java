@@ -1,8 +1,17 @@
 
 import collections.*;
+import inheritance.person.*;
 
 public class Main {
     public static void main(String[] args) {
+
+//**************Inheritance**************//
+        Person person = new Person();
+        Employee employee = new Employee();
+        Employee employee2 = new Employee("C22", "Manager");
+
+        // we can now get getTitle from Person class
+        System.out.println(employee.getTitle());
 
 //**************Collections**************//
 
