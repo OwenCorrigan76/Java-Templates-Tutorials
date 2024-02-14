@@ -35,4 +35,10 @@ public class Employee extends Person {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    //Employee e = new Employee();
+
+    public static void test(Employee e){
+        System.out.println(e.title);
+    }
 }

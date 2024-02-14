@@ -1,4 +1,5 @@
 
+import Strings.ParseStrings;
 import collections.*;
 import inheritance.person.*;
 import inheritance.shape.*;
@@ -47,7 +48,7 @@ public class Main {
         // dog.fetch
 
         // this will work though as a downcast
-        ((Dog)dog).fetch();
+        ((Dog) dog).fetch();
 
         // instanceOf helps check if an object is an instance of a class
         Animal sasha = new Dog();
@@ -74,5 +75,13 @@ public class Main {
 
         ForEachLambda forEachLambda = new ForEachLambda();
         // forEachLambda.testForeachLambda();
+
+//**************Strings**************//
+
+        ParseStrings strings = new ParseStrings();
+        strings.parsing();
+        strings.getWord();
+
     }
+
 }
