@@ -81,6 +81,10 @@ public class Main {
         ParseStrings strings = new ParseStrings();
         strings.parsing();
         strings.getWord();
+        strings.getTheIndexOfWord();
+        strings.testConcat();
+        strings.testConcat2();
+        strings.testConcat3();
 
     }
 
