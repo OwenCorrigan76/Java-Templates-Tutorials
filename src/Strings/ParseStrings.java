@@ -48,20 +48,28 @@ public class ParseStrings {
     }
 
     // compare two Strings
-    public void testConcat2() {
+    public void testCompare() {
         String a = "Comparing example.com and example.com";
         String b = "Comparing Example.com and example.com";
         boolean c = a.contentEquals(b);
         System.out.println("Answer: " + c);
     }
 
-    public void testConcat3() {
+    public void testCompare2() {
         String a = "Comparing example.com and example.com ";
         String b = "Comparing Example.com and example.com ";
         StringBuilder stringBuilder = new StringBuilder(a);
         StringBuilder stringBuilder1 = new StringBuilder(b);
-        ;
-        System.out.println(a + stringBuilder + " : " + a.contentEquals(stringBuilder));
-        System.out.println(b + stringBuilder1 + " : " + a.contentEquals(stringBuilder1));
+        System.out.println(stringBuilder + " : " + a.contentEquals(stringBuilder));
+        System.out.println(stringBuilder1 + " : " + a.contentEquals(stringBuilder1));
+    }
+    public void endsWith() {
+        String a = "Comparing example.com and example.com ";
+        System.out.println(a.endsWith("example.com "));
+    }
+
+    public void containsTheSame(){
+        String a = "Stephen Edwin King Walter Winchell";
+        String b = "Stephen Edwin King Mike Royko";
     }
 }

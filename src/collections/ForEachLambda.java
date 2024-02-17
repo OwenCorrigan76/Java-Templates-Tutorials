@@ -6,7 +6,9 @@ import java.util.List;
 public class ForEachLambda {
 
     public static void testForeachLambda(){
+
         List<String> fruits = new ArrayList<>();
+
         // add to fruits
         fruits.add("apple");
         fruits.add("orange");

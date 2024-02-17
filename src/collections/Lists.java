@@ -6,7 +6,10 @@ import java.util.List;
 public class Lists {
 
     public void myFruits() {
+
+        // how to declare a new arrayList
         List<Object> fruits = new ArrayList<>();
+
         // add to fruits
         fruits.add("apple");
         fruits.add("orange");
@@ -28,7 +31,5 @@ public class Lists {
 
         // get the first index: grapes
         System.out.println(newList.get(1));
-
-
     }
 }

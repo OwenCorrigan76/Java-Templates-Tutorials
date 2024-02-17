@@ -1,5 +1,8 @@
 
 import Strings.ParseStrings;
+import inheritance.shape.Rectangle;
+import abstraction.Rectangle2;
+import abstraction.Shape;
 import collections.*;
 import inheritance.person.*;
 import inheritance.shape.*;
@@ -28,6 +31,7 @@ public class Main {
         square.calculatePerimeter();
 
 //**************Polymorphism**************//
+
         // an object can have a superclass type and a subclass instance
         Dog rocky = new Dog();
         rocky.fetch();
@@ -56,6 +60,12 @@ public class Main {
         System.out.println(isDog);
 
 
+//**************Abstraction**************//
+
+        // can't create an instance of Shape but can of its subclass
+        Shape rectangle2 = new Rectangle2(5, 7);
+        System.out.println("Area: " + rectangle2.calculateArea());
+
 //**************Collections**************//
 
         Sets sets = new Sets();
@@ -83,9 +93,8 @@ public class Main {
         strings.getWord();
         strings.getTheIndexOfWord();
         strings.testConcat();
-        strings.testConcat2();
-        strings.testConcat3();
-
+        strings.testCompare();
+        strings.testCompare2();
+        strings.endsWith();
     }
-
 }

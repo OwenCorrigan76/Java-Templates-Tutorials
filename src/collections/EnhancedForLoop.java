@@ -6,7 +6,9 @@ import java.util.List;
 public class EnhancedForLoop {
 
     public static void loopTest() {
+
         List<String> fruits = new ArrayList<>();
+
         // add to fruits
         fruits.add("apple");
         fruits.add("orange");
