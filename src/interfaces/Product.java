@@ -1,7 +1,7 @@
 package interfaces;
 
-// An interface is meant to be purely abstract and do not have state.
-// Do not ave constructors, values of fields cannot be changed.
+// An interface is meant to be purely abstract and does not have state.
+// Do not have constructors, values of fields cannot be changed.
 // Other classes implement instead of extend.
 
 public interface Product {
