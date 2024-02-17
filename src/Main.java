@@ -6,6 +6,8 @@ import abstraction.Shape;
 import collections.*;
 import inheritance.person.*;
 import inheritance.shape.*;
+import interfaces.Book;
+import interfaces.Product;
 import polymorphism.Animal;
 import polymorphism.Cat;
 import polymorphism.Dog;
@@ -65,6 +67,21 @@ public class Main {
         // can't create an instance of Shape but can of its subclass
         Shape rectangle2 = new Rectangle2(5, 7);
         System.out.println("Area: " + rectangle2.calculateArea());
+
+//**************Interfaces**************//
+
+        Book book = new Book();
+        book.setId("ABC");
+
+        System.out.println("Book Id: " + book.getId());
+
+        // We can also create a Book object from Product
+        Product book2 = new Book();
+
+        // but we can't do this:
+        // Product book2 = new Product();
+
+
 
 //**************Collections**************//
 
