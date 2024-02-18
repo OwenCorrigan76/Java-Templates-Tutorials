@@ -1,6 +1,6 @@
 
-import Generics.GenericsExample;
-import Strings.ParseStrings;
+import generics.GenericsExample;
+import strings.ParseStrings;
 import exceptions.*;
 import inheritance.shape.Rectangle;
 import abstraction.Rectangle2;
