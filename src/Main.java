@@ -1,4 +1,5 @@
 
+import Generics.GenericsExample;
 import Strings.ParseStrings;
 import exceptions.*;
 import inheritance.shape.Rectangle;
@@ -33,22 +34,22 @@ public class Main {
 
         // calling the method (super) and the @Overridden method (sub)
         rectangle.calculatePerimeter();
-        square.calculatePerimeter();
+//        square.calculatePerimeter();
 
 //**************Polymorphism**************//
 
         // an object can have a superclass type and a subclass instance
         Dog rocky = new Dog();
-        rocky.fetch();
-        rocky.makeSound();
+//        rocky.fetch();
+//        rocky.makeSound();
 
         // type animal but an instance of dog
         Animal sash = new Dog();
-        sash.makeSound();
+//        sash.makeSound();
 
         // change sash to a cat to print meow
         sash = new Cat();
-        sash.makeSound();
+//        sash.makeSound();
 
         // typecasting - upcasting dog to animal
         Animal dog = new Dog();
@@ -57,26 +58,26 @@ public class Main {
         // dog.fetch
 
         // this will work though as a downcast
-        ((Dog) dog).fetch();
+//        ((Dog) dog).fetch();
 
         // instanceOf helps check if an object is an instance of a class
         Animal sasha = new Dog();
         boolean isDog = sasha instanceof Animal;
-        System.out.println(isDog);
+//        System.out.println(isDog);
 
 
 //**************Abstraction**************//
 
         // can't create an instance of Shape but can of its subclass
         Shape rectangle2 = new Rectangle2(5, 7);
-        System.out.println("Area: " + rectangle2.calculateArea());
+//        System.out.println("Area: " + rectangle2.calculateArea());
 
 //**************Interfaces**************//
 
         Book book = new Book();
         book.setId("ABC");
 
-        System.out.println("Book Id: " + book.getId());
+//        System.out.println("Book Id: " + book.getId());
 
         // We can also create a Book object from Product
         Product book2 = new Book();
@@ -108,21 +109,21 @@ public class Main {
 //**************Strings**************//
 
         ParseStrings strings = new ParseStrings();
-        strings.parsing();
-        strings.getWord();
-        strings.getTheIndexOfWord();
-        strings.testConcat();
-        strings.testCompare();
-        strings.testCompare2();
-        strings.endsWith();
+//        strings.parsing();
+//        strings.getWord();
+//        strings.getTheIndexOfWord();
+//        strings.testConcat();
+//        strings.testCompare();
+//        strings.testCompare2();
+//        strings.endsWith();
 
 
 //**************Exceptions**************//
         TryCatch tryCatch = new TryCatch();
-        tryCatch.tryFileMethod();
+//        tryCatch.tryFileMethod();
 
         // prove the program hasn't crashed
-        tryCatch.methodToProveProgramIsStillRunningAfterTryCatch();
+//        tryCatch.methodToProveProgramIsStillRunningAfterTryCatch();
 
         // print the stack trace of error
 //        StackTrace stackTrace = new StackTrace();
@@ -145,6 +146,10 @@ public class Main {
 //        throwingExceptions.calculatePay(-2, -5);
 
         Rethrow rethrow = new Rethrow();
-        Rethrow.rethrowException();
+//        Rethrow.rethrowException();
+
+//**************Generics**************//
+        GenericsExample genericsExample = new GenericsExample();
+        genericsExample.testGenerics();
     }
 }
