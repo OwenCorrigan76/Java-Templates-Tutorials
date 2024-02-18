@@ -13,6 +13,9 @@ public class TryCatch {
         //File file = new File(URI.create("http://localhost"));
         try {
             file.createNewFile();
+            // ***NB*** We could also use Polymorphism to catch this if we
+            // didn't know the exception as exception is the superclass
+            // could use (exception e)
         } catch (IOException e) {
             System.out.println("Error: " + e);
         }

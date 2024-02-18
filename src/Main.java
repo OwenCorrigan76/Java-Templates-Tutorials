@@ -1,5 +1,6 @@
 
 import Strings.ParseStrings;
+import exceptions.MultipleExceptions;
 import exceptions.StackTrace;
 import inheritance.shape.Rectangle;
 import abstraction.Rectangle2;
@@ -126,5 +127,9 @@ public class Main {
         // print the stack trace of error
         StackTrace stackTrace = new StackTrace();
         stackTrace.printStackTrace();
+
+        // test multiple exceptions
+        MultipleExceptions multipleExceptions = new MultipleExceptions();
+        multipleExceptions.multiple();
     }
 }
