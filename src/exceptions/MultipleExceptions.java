@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class MultipleExceptions {
 
     public void multiple() {
-        File file = new File("../exceptions/numbers.txt");
-        System.out.println(file);
+        File file = new File("/Users/owencorrigan/Desktop/Web Dev Stuff/Java Training/src/numbers.txt");
+        System.out.println(file.exists());
         try {
             Scanner fileReader = new Scanner(file);
             System.out.println(fileReader);
             while (fileReader.hasNext()) {
-                System.out.println(fileReader.hasNextDouble());
+                System.out.println(fileReader.nextDouble());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

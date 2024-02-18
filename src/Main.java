@@ -1,7 +1,6 @@
 
 import Strings.ParseStrings;
-import exceptions.MultipleExceptions;
-import exceptions.StackTrace;
+import exceptions.*;
 import inheritance.shape.Rectangle;
 import abstraction.Rectangle2;
 import abstraction.Shape;
@@ -13,10 +12,11 @@ import interfaces.Product;
 import polymorphism.Animal;
 import polymorphism.Cat;
 import polymorphism.Dog;
-import exceptions.TryCatch;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 //**************Inheritance**************//
         Person person = new Person();
@@ -82,28 +82,28 @@ public class Main {
         Product book2 = new Book();
 
         // but we can't do this:
-        // Product book2 = new Product();
+//         Product book2 = new Product();
 
 
 //**************Collections**************//
 
         Sets sets = new Sets();
-        // sets.addFruits();
+//         sets.addFruits();
 
         Lists lists = new Lists();
-        // lists.myFruits();
+//         lists.myFruits();
 
         Queues queues = new Queues();
-        // Queues.niceFruits();
+//         Queues.niceFruits();
 
         Maps maps = new Maps();
-        // maps.addFruits();
+//         maps.addFruits();
 
         EnhancedForLoop enhancedForLoop = new EnhancedForLoop();
-        // enhancedForLoop.loopTest();
+//         enhancedForLoop.loopTest();
 
         ForEachLambda forEachLambda = new ForEachLambda();
-        // forEachLambda.testForeachLambda();
+//         forEachLambda.testForeachLambda();
 
 //**************Strings**************//
 
@@ -125,11 +125,26 @@ public class Main {
         tryCatch.methodToProveProgramIsStillRunningAfterTryCatch();
 
         // print the stack trace of error
-        StackTrace stackTrace = new StackTrace();
-        stackTrace.printStackTrace();
+//        StackTrace stackTrace = new StackTrace();
+//        stackTrace.printStackTrace();
 
         // test multiple exceptions
-        MultipleExceptions multipleExceptions = new MultipleExceptions();
-        multipleExceptions.multiple();
+//        MultipleExceptions multipleExceptions = new MultipleExceptions();
+//        multipleExceptions.multiple();
+
+        // add finally to ensure code is run no matter if there's an e or not
+        Finally f = new Finally();
+//        f.multiple();
+
+        // look at tryWithResources
+
+        ThrowingExceptions throwingExceptions = new ThrowingExceptions();
+        // hours myst be under 40
+//        throwingExceptions.calculatePay(60, 50);
+        // can't be negative
+//        throwingExceptions.calculatePay(-2, -5);
+
+        Rethrow rethrow = new Rethrow();
+        Rethrow.rethrowException();
     }
 }
