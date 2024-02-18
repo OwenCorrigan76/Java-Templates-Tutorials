@@ -1,5 +1,6 @@
 
 import Strings.ParseStrings;
+import exceptions.StackTrace;
 import inheritance.shape.Rectangle;
 import abstraction.Rectangle2;
 import abstraction.Shape;
@@ -11,6 +12,7 @@ import interfaces.Product;
 import polymorphism.Animal;
 import polymorphism.Cat;
 import polymorphism.Dog;
+import exceptions.TryCatch;
 
 public class Main {
     public static void main(String[] args) {
@@ -82,7 +84,6 @@ public class Main {
         // Product book2 = new Product();
 
 
-
 //**************Collections**************//
 
         Sets sets = new Sets();
@@ -113,5 +114,17 @@ public class Main {
         strings.testCompare();
         strings.testCompare2();
         strings.endsWith();
+
+
+//**************Exceptions**************//
+        TryCatch tryCatch = new TryCatch();
+        tryCatch.tryFileMethod();
+
+        // prove the program hasn't crashed
+        tryCatch.methodToProveProgramIsStillRunningAfterTryCatch();
+
+        // print the stack trace of error
+        StackTrace stackTrace = new StackTrace();
+        stackTrace.printStackTrace();
     }
 }
