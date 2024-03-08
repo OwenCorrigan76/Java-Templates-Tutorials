@@ -13,6 +13,7 @@ import interfaces.Product;
 import polymorphism.Animal;
 import polymorphism.Cat;
 import polymorphism.Dog;
+import varArgs.VarArgs;
 
 import java.io.IOException;
 
@@ -150,6 +151,10 @@ public class Main {
 
 //**************Generics**************//
         GenericsExample genericsExample = new GenericsExample();
-        genericsExample.testGenerics();
+//        genericsExample.testGenerics();
+
+//**************VarArgs**************//
+        VarArgs varArgs = new VarArgs();
+        varArgs.callArgs();
     }
 }

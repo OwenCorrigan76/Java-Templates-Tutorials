@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenericsExample {
 
-    public static void testGenerics() {
+    public void testGenerics() {
         String[] words = {"apple", "banana", "pear"};
         Integer[] numbers = {1, 2, 3};
         // now call the method with whatever object is required
