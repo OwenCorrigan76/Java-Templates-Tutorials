@@ -10,6 +10,7 @@
 * polymorphism
 * strings
 * varArgs
+* wildcards
 
 To use these examples, clone this repo to your local machine and open it in your favorite IDE.
 The examples can be called from the `main` method in the `Main` class and are currently commented out.
