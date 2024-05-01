@@ -14,8 +14,13 @@ import polymorphism.Animal;
 import polymorphism.Cat;
 import polymorphism.Dog;
 import varArgs.VarArgs;
+import wildcards.Building;
+import wildcards.House;
+import wildcards.Office;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -155,6 +160,34 @@ public class Main {
 
 //**************VarArgs**************//
         VarArgs varArgs = new VarArgs();
-        varArgs.callArgs();
+//        varArgs.callArgs();
+
+
+//**************Wildcards**************//
+        List<Building> buildings = new ArrayList<>();
+        buildings.add(new Building());
+        buildings.add(new Building());
+        printBuildings(buildings);
+
+        // can't do this because Office is not a subclass of Building without wildcards
+        List<Office> offices = new ArrayList<>();
+        offices.add(new Office());
+        offices.add(new Office());
+        printBuildings(offices);
+
+        List<House> houses = new ArrayList<>();
+        houses.add(new House());
+        houses.add(new House());
+        // this will work because House is a subclass of Building
+        // and there is a wildcard in the method signature
+        printBuildings(houses);
+    }
+// adding in ? extends Building allows us to pass in a list of any subclass of Building
+    static void printBuildings(List<? extends Building> buildings) {
+        for (int i = 0; i < buildings.size(); i++) {
+            System.out.println(i + 1 + ": " + buildings.get(i).toString());
+        }
     }
 }
+
+
