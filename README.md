@@ -8,6 +8,7 @@
 * inheritance
 * interfaces
 * polymorphism
+* return types
 * strings
 * varArgs
 * wildcards
