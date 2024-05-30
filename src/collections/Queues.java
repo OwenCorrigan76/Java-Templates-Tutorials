@@ -15,7 +15,7 @@ public class Queues {
         fruits.add("mango");
 
         // removes the first element of the collection
-        var removed = fruits.remove();
+        String removed = fruits.remove();
         // prints: apple
         System.out.println(removed);
 

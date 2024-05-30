@@ -6,6 +6,23 @@ public class ReturnTypes {
         //call the method and print the result
         System.out.println(timesTwo(4));
         System.out.println(quadrupleIt(4));
+//------------------------------------------------------
+        Amplifier myAmplifier = AmpFactory.makeAnAmp();
+        System.out.println("This model is : " + myAmplifier.getMake());
+
+        Amplifier amplifier = Amplifier.myAmp2();
+        String make = amplifier.getMake();
+        System.out.println("Make is : " + make);
+
+
+        Amplifier amplifier1 = Amplifier.myAmp3();
+        String model = amplifier1.getModel();
+        System.out.println("Model is: " + model);
+        amplifier1.setMake("Fender");
+        System.out.println("Make is : " + amplifier1.getMake());
+
+//------------------------------------------------------
+
 
         // create a new guitar object
         Guitar guitar = new Guitar("Fender", "Stratocaster", 1954);
@@ -24,8 +41,10 @@ public class ReturnTypes {
         myGuitar.displayDetails();
         String mySecondGuitar = mySeondGuitar.getBrand();
         System.out.println("My second guitar brand is: " + mySecondGuitar);
-
     }
+
+
+//------------------------------------------------------
 
     private static void playingGuitar() {
     }
