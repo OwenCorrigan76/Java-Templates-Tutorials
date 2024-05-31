@@ -7,12 +7,14 @@ public class Guitar {
     private int year;
     private int strings;
     private String factory;
+    static String guitarType = "Electric";
 
     public Guitar(String brand, String model, int year){
         this.brand = brand;
         this.model = model;
         this.year = year;
     }
+    
 
     public Guitar(String brand, String model, int year, int strings){
         this.brand = brand;
@@ -53,7 +55,36 @@ public class Guitar {
         this.year = year;
     }
 
-    public void playGuitar() {
+    public int getStrings() {
+        return strings;
+    }
+
+    public void setStrings(int strings) {
+        this.strings = strings;
+    }
+
+    public String getFactory() {
+        return factory;
+    }
+
+    public void setFactory(String factory) {
+        this.factory = factory;
+    }
+
+    public String findGuitar() {
+        return (this.brand + " " + this.model + " " + this.year + " " + this.strings + " " + this.factory + " " + guitarType);
+    }
+
+    public String findGuitar2() {
+        return (this.brand + " " + this.model + " " + this.year + " " + this.strings  + " " + guitarType);
+    }
+
+    public void guitarFound(){
+        String foundGuitar = findGuitar();
+        System.out.println("Guitar found: " + foundGuitar);
+    }
+
+    public static void playGuitar() {
         System.out.println("Playing the guitar");
     }
 

@@ -1,6 +1,5 @@
 package returnTypes;
 
-
 public class ReturnTypes {
     public static void main(String[] args) {
         //call the method and print the result
@@ -23,31 +22,46 @@ public class ReturnTypes {
 
 //------------------------------------------------------
 
-
         // create a new guitar object
         Guitar guitar = new Guitar("Fender", "Stratocaster", 1954);
-        // create a new guitar object using the factory method
+        Guitar guitar2 = new Guitar("Fender", "Stratocaster", 1954, 7, "USA");
+
+        // create a new guitar object using the factory method which creates a new guitar object in the method
         Guitar myGuitar = GuitarFactory.makeGuitar("Fender", "Stratocaster", 1954);
         Guitar mySeondGuitar = GuitarFactory.makeGuitar("Fender", "Stratocaster", 1954, 6, "USA");
 
-        // call the method
+        // call the method from below
         playingGuitar();
         // call the method with arguments
         playingGuitar("Fender", "Stratocaster", 1954);
-        // call the method with the object
+        // This is wrong because th playGuitar method is static
+        // Must be called with the class name
         guitar.playGuitar();
-        // call the method with the object
-        myGuitar.playGuitar();
+        guitar2.playGuitar();
+
+        // This is fine because the method is not static
+        guitar.guitarFound();
+        guitar2.guitarFound();
+        System.out.println(guitar2.findGuitar2());
+        //This is how you call the static method with the Class name
+        Guitar.playGuitar();
+
+        System.out.println("Guitar Type: " + Guitar.guitarType);
+
+
         myGuitar.displayDetails();
         String mySecondGuitar = mySeondGuitar.getBrand();
         System.out.println("My second guitar brand is: " + mySecondGuitar);
     }
 
+    public static void playingGuitar(){
+    }
 
+    public static void playingGuitar(String brand, String model, int year) {
+        System.out.println("Brand is : " + brand + " " + model + " " + year);
+    }
 //------------------------------------------------------
 
-    private static void playingGuitar() {
-    }
 
     //return a value multiplied by 2
     public static int timesTwo(int num) {
@@ -58,9 +72,5 @@ public class ReturnTypes {
     public static int quadrupleIt(int num) {
         int number = timesTwo(num);
         return number * 2;
-    }
-
-    public static void playingGuitar(String brand, String model, int year) {
-        System.out.println("Brand is : " + brand + " " + model + " " + year);
     }
 }
