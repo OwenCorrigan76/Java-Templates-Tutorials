@@ -1,6 +1,27 @@
 package strings;
 
+
 public class ParseStrings {
+    public static void main(String[] args) {
+        ParseStrings parseStrings = new ParseStrings();
+        parseStrings.parsing();
+        parseStrings.getWord();
+        parseStrings.getTheIndexOfWord();
+        parseStrings.testConcat();
+        parseStrings.testCompare();
+        parseStrings.testCompare2();
+        parseStrings.endsWith();
+        parseStrings.containsTheSame();
+
+        String joinedString = joinStrings();
+        System.out.println(joinedString);
+    }
+
+
+    public static String joinStrings() {
+        String joined = String.join("-", "Java", "is", "cool");
+        return joined;
+    }
 
     // find a word in a sentence
     public void parsing() {
@@ -63,12 +84,13 @@ public class ParseStrings {
         System.out.println(stringBuilder + " : " + a.contentEquals(stringBuilder));
         System.out.println(stringBuilder1 + " : " + a.contentEquals(stringBuilder1));
     }
+
     public void endsWith() {
         String a = "Comparing example.com and example.com ";
         System.out.println(a.endsWith("example.com "));
     }
 
-    public void containsTheSame(){
+    public void containsTheSame() {
         String a = "Stephen Edwin King Walter Winchell";
         String b = "Stephen Edwin King Mike Royko";
     }
