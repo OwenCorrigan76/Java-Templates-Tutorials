@@ -4,15 +4,8 @@ public class Guitar implements GuitarStrings {
 
     public static void main(String[] args) {
        guitarWoodType();
-
-    }
-
-
-    static void guitarWoodType(){
-        String m = (WoodType.woodType());
-        String a = (WoodType.woodType2());
-        String n = woodType();
-        System.out.println("I like " + m + " guitars and I like " + a + " guitars. But I don't like " + n + " guitars.");
+       Amplifier myNewAmp = AmpFactory.makeAnAmp();
+        System.out.println(myNewAmp.getMake());
     }
 
     private String brand;
@@ -42,6 +35,13 @@ public class Guitar implements GuitarStrings {
         this.year = year;
         this.strings = strings;
         this.factory = factory;
+    }
+
+    static void guitarWoodType(){
+        String m = (WoodType.woodType());
+        String a = (WoodType.woodType2());
+        String n = woodType();
+        System.out.println("I like " + m + " guitars and I like " + a + " guitars. But I don't like " + n + " guitars.");
     }
 
     public String getBrand(){
@@ -105,13 +105,13 @@ public class Guitar implements GuitarStrings {
         System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
     }
 
-    @Override
-    public void numStrings() {
-        System.out.println("Number of strings: " + strings);
-    }
-
 
     public static String woodType() {
         return "Babmoo";
+    }
+
+    @Override
+    public void numStrings(int num) {
+
     }
 }

@@ -1,7 +1,7 @@
 package returnTypes;
 
 public interface GuitarStrings {
-     void numStrings();
+     void numStrings(int num);
 
 
 }
