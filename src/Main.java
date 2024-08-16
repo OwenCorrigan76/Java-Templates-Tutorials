@@ -112,7 +112,7 @@ public class Main {
         ForEachLambda forEachLambda = new ForEachLambda();
 //         forEachLambda.testForeachLambda();
 
-//**************Strings**************//
+//**************GuitarStrings**************//
 
         ParseStrings strings = new ParseStrings();
 //        strings.parsing();

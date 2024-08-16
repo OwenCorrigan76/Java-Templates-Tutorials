@@ -31,7 +31,7 @@ public class ParseStrings {
     }
 
     public String findSecondLastWord(String s) {
-        String[] words = s.split("\\s+");
+        String[] words = s.split("\\s");
         if (words.length < 2) {
             return "Input string doesn't have enough words";
         }
@@ -68,7 +68,7 @@ public class ParseStrings {
         System.out.println(g);
     }
 
-    // compare two Strings
+    // compare two GuitarStrings
     public void testCompare() {
         String a = "Comparing example.com and example.com";
         String b = "Comparing Example.com and example.com";

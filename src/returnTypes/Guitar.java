@@ -1,6 +1,19 @@
 package returnTypes;
 
-public class Guitar {
+public class Guitar implements GuitarStrings {
+
+    public static void main(String[] args) {
+       guitarWoodType();
+
+    }
+
+
+    static void guitarWoodType(){
+        String m = (WoodType.woodType());
+        String a = (WoodType.woodType2());
+        String n = woodType();
+        System.out.println("I like " + m + " guitars and I like " + a + " guitars. But I don't like " + n + " guitars.");
+    }
 
     private String brand;
     private String model;
@@ -90,5 +103,15 @@ public class Guitar {
 
     public void displayDetails() {
         System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
+    }
+
+    @Override
+    public void numStrings() {
+        System.out.println("Number of strings: " + strings);
+    }
+
+
+    public static String woodType() {
+        return "Babmoo";
     }
 }
