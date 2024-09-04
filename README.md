@@ -4,12 +4,14 @@
 * abstraction
 * collections
 * exceptions
+* functionalInterface
 * generics
 * inheritance
 * interfaces
 * polymorphism
 * return types
 * strings
+* threads
 * varArgs
 * wildcards
 
