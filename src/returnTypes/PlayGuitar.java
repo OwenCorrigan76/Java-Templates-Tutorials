@@ -1,5 +1,4 @@
 package returnTypes;
-
 import java.util.Map;
 
 public class PlayGuitar {

@@ -1,11 +1,32 @@
 package generics;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class GenericsExample {
+    public static void main(String[] args) {
 
-    public void testGenerics() {
+        List<String> myListOfNames = testMethod();
+        System.out.println(myListOfNames);
+
+        testGenerics();
+
+    }
+    //Simple example of a list
+    public static List<String> testMethod() {
+        List<String> t = new ArrayList<>();
+        t.add("Owen");
+        t.add("Eve");
+        t.add("Jude");
+        return t;
+    }
+
+
+
+
+
+    public static void testGenerics() {
         String[] words = {"apple", "banana", "pear"};
         Integer[] numbers = {1, 2, 3};
         // now call the method with whatever object is required

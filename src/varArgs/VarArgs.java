@@ -1,13 +1,17 @@
 package varArgs;
 
 public class VarArgs {
-
-    public void callArgs() {
-        String imem1 = "Apples";
+    public static void main(String[] args) {
+        callArgs();
+    }
+    public static void callArgs() {
+        String item1 = "Apples";
         String item2 = "Oranges";
         String item3 = "Pears";
-        printShoppingList(imem1, item2, item3);
-        printShoppingList("Bread", "Milk", "Eggs", "Bananas");
+        String item4 = "Pears22";
+        printShoppingList(item1, item2, item3, item4);
+        printShoppingList("Bread", "Milk", "Eggs");
+        printShoppingList("Owen", "Gayle");
     }
 
     // we can overload the method with different amount of parameters
