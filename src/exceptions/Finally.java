@@ -6,9 +6,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Finally {
-
-    public void multiple() {
-        File file = new File("/Users/owencorrigan/Desktop/Web Dev Stuff/Java Training/src/numbers.txt");
+    public static void main(String[] args) {
+        multiple();
+    }
+    public static void multiple() {
+        File file = new File("/someDirectory/numbers.txt");
         Scanner fileReader = null;
         try {
             fileReader = new Scanner(file);
@@ -18,6 +20,9 @@ public class Finally {
         } catch (FileNotFoundException | InputMismatchException e) {
             e.printStackTrace();
         } finally {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Num: " + i);
+            }
             System.out.println("Next will close");
             fileReader.close();
         }

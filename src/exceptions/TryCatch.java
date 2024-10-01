@@ -5,12 +5,14 @@ import java.io.IOException;
 import java.net.URI;
 
 public class TryCatch {
-
+    public static void main(String[] args) {
+        tryFileMethod();
+    }
     // trying to crete a file in a path that does not exist
-    public void tryFileMethod() {
+    public static void tryFileMethod() {
         File file = new File("madeUp/nowhere.txt");
         //also.... using URI constructor
-        //File file = new File(URI.create("http://localhost"));
+        // File file = new File(URI.create("http://localhost"));
         try {
             file.createNewFile();
             // ***NB*** We could also use Polymorphism to catch this if we
