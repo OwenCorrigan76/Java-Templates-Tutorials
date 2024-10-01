@@ -8,6 +8,7 @@
 * generics
 * inheritance
 * interfaces
+* loops
 * polymorphism
 * return types
 * sound
