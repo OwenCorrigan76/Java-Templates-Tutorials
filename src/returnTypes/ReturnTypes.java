@@ -5,6 +5,9 @@ public class ReturnTypes {
         //call the method and print the result
         System.out.println(timesTwo(4));
         System.out.println(quadrupleIt(4));
+        System.out.println(timesFour(10));
+        int testTheAlg = testAlg();
+        System.out.println("Answer is: " + testTheAlg);
 //------------------------------------------------------
         Amplifier myAmplifier = AmpFactory.makeAnAmp();
         System.out.println("This model is : " + myAmplifier.getMake());
@@ -54,6 +57,10 @@ public class ReturnTypes {
         System.out.println("My second guitar brand is: " + mySecondGuitar);
     }
 
+    public static int timesFour(int num){
+        return timesTwo(num)*2;
+    }
+
     public static void playingGuitar(){
     }
 
@@ -66,6 +73,16 @@ public class ReturnTypes {
     //return a value multiplied by 2
     public static int timesTwo(int num) {
         return num * 2;
+    }
+
+    public static int alg(int num){
+    int a = 99, b = 10, c = 33;
+    int result = num + a * b / c;
+    return result;
+    }
+
+    public static int testAlg(){
+        return alg(89) * 22;
     }
 
     // use the timesTwo method to return a value multiplied by 4
